@@ -18,7 +18,7 @@ import java.util.List;
  * @author Elizabeth Parsons, Jackson Trahan
  */
 public class SalesAssociate extends LoginAccount {
-    String firstName;
+    public String firstName;
     String lastName;
     String email;
     Warehouse warehouse;
@@ -159,8 +159,7 @@ public class SalesAssociate extends LoginAccount {
         
         System.out.println("Enter in Employee who received parts.");
         String employee = scnr.nextLine();
-        //TODO: ADD ability to calculate totalCost
-        SalesInvoice salesInvoice= new SalesInvoice(date, bp, employee, salesAssociate, totalCost, customer);
+        SalesInvoice salesInvoice= new SalesInvoice(date, customer, bp, employee, salesAssociate, bp.getPrice()*quantity);
         return salesInvoice;
     }
 }
