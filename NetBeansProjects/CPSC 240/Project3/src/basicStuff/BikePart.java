@@ -2,7 +2,7 @@ package basicStuff;
 
 /**
  *
- * @author Elizabeth Parsons
+ * @author Elizabeth Parsons, Jackson Trahan
  */
 public class BikePart {
    private String name;
