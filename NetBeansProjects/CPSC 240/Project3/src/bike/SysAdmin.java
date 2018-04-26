@@ -2,6 +2,7 @@
 package bike;
 
 import basicStuff.LoginAccount;
+import basicStuff.Person;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
@@ -12,15 +13,10 @@ import java.util.ArrayList;
  * @author Elizabeth Parsons, Jackson Trahan
  */
 public class SysAdmin extends LoginAccount {
-    String firstName;
-    String lastName;
-    String email;
-    
     ArrayList<LoginAccount> users = new ArrayList<>();
     
     public SysAdmin(String fn, String ln, String em, String un, String pw) {
-        firstName = fn;
-        lastName = ln;
+        person = new Person(fn, ln);
         email = em;
         username = un;
         password = pw;
@@ -36,7 +32,7 @@ public class SysAdmin extends LoginAccount {
         
         while(scnr.hasNextLine()){
             String[] data = scnr.nextLine().split(", ");
-            switch (data[2].toLowerCase()) {
+            switch (data[0].toLowerCase()) {
                 case "office manager":
                     users.add(new OfficeMan(data[4], data[5], data[3], data[1], data[2]));
                     break;

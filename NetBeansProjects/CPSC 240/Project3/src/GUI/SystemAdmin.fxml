@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="250" prefWidth="650" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.OfficeManagerFXMLController">
-    <children>
-        <MenuButton text="Log out" />
-        <TextField layoutX="50" layoutY="50" prefWidth="200" fx:id="input" />
-        <GridPane layoutX="50" layoutY="100" hgap="10" vgap="10" prefWidth="200">
-            <Button GridPane.columnIndex="0" GridPane.rowIndex="0" text="Search by name" prefWidth="100" fx:id="nameSearchButton" />
-            <Button GridPane.columnIndex="1" GridPane.rowIndex="0" text="Search by num" prefWidth="100" fx:id="numSearchButton" />
-        </GridPane>
-        <TextArea layoutX="300" layoutY="50" prefHeight="150" prefWidth="300" editable="False" fx:id="output" />
-    </children>
-</AnchorPane>
+<TabPane fx:id="tabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SystemAdminFXMLController">
+    <tabs>
+        <Tab closable="False" text="Manage Accounts">
+           <content>
+               <AnchorPane fx:id="loadPartPane" prefHeight="250" prefWidth="650">
+                  <children>
+                      <ListView fx:id="listView" layoutX="402.0" layoutY="50.0" prefHeight="150.0" prefWidth="190.0" visible="false">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ListView>
+                  <TextField fx:id="firstNameField" layoutX="121.0" layoutY="90.0" prefHeight="27.0" prefWidth="69.0" visible="false" />
+                  <Text fx:id="firstNameLabel" layoutX="52.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First name:" visible="false" />
+                  <Text fx:id="lastNameLabel" layoutX="222.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name:" visible="false" />
+                  <TextField fx:id="emailField" layoutX="120.0" layoutY="195.0" prefHeight="27.0" prefWidth="69.0" visible="false" />
+                  <TextField fx:id="lastNameField" layoutX="291.0" layoutY="90.0" prefHeight="27.0" prefWidth="69.0" visible="false" />
+                  <Text fx:id="emailLabel" layoutX="83.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" visible="false" />
+                  <Text fx:id="usernameLabel" layoutX="53.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" visible="false" wrappingWidth="67.35302734375" />
+                  <TextField fx:id="usernameField" layoutX="120.0" layoutY="144.0" prefHeight="27.0" prefWidth="69.0" visible="false" />
+                  <TextField fx:id="passwordField" layoutX="290.0" layoutY="144.0" prefHeight="27.0" prefWidth="69.0" visible="false" />
+                  <Text fx:id="passwordLabel" layoutX="223.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" visible="false" wrappingWidth="67.35302734375" />
+                  <Button fx:id="addAccountButton" layoutX="240.0" layoutY="195.0" mnemonicParsing="false" onAction="#addUser" text="Add Account" visible="false" />
+                  <ComboBox fx:id="manageAccountType" layoutX="217.0" layoutY="37.0" prefHeight="27.0" prefWidth="167.0" promptText="Pick Account Type" visible="false" />
+                  <ComboBox fx:id="manageAccountsCB" layoutX="46.0" layoutY="37.0" onAction="#switchMenu" prefWidth="150.0" />
+                  <Button fx:id="deleteAccountButton" layoutX="240.0" layoutY="180.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete Account" visible="false" />
+                  <ComboBox fx:id="userCB" layoutX="226.0" layoutY="37.0" prefWidth="150.0" promptText="Select User" visible="false" />
+                  <Button fx:id="resetPassButton" layoutX="90.0" layoutY="131.0" mnemonicParsing="false" onAction="#resetPass" text="Reset" visible="false" />
+                  </children>
+               </AnchorPane>
+           </content>
+        </Tab>
+        <Tab closable="False" text="Order Part">
+           <content>
+               <AnchorPane fx:id="OrderPartPane" prefHeight="250" prefWidth="650">
+                
+            </AnchorPane>
+           </content>
+        </Tab>
+        <Tab fx:id="logOutButton" closable="False" onSelectionChanged="#logOut" text="Log Out" />
+    </tabs>
+</TabPane>

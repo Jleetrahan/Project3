@@ -1,6 +1,7 @@
 package bike;
 
 import basicStuff.LoginAccount;
+import basicStuff.Person;
 import java.util.ArrayList;
 
 /**
@@ -8,13 +9,9 @@ import java.util.ArrayList;
  * @author Elizabeth Parsons, Jackson Trahan
  */
 public class OfficeMan extends LoginAccount {
-    String firstName; 
-    String lastName;
-    String email;
     
-    public OfficeMan(String fn, String ln, String em, String un, String pw){
-        firstName = fn;
-        lastName = ln;
+    public OfficeMan(String fn, String ln, String em, String un, String pw) {
+        person = new Person(fn, ln);
         email = em;
         username = un;
         password = pw;
@@ -22,7 +19,6 @@ public class OfficeMan extends LoginAccount {
     
     public WarehousePart[] getPartsByName(String name) {
         ArrayList<WarehousePart> parts = new ArrayList();
-        Warehouse wh = WarehouseFactory.getWarehouse(this);
         for (WarehousePart whp : WarehouseFactory.getWarehouse(this).whDb.getInventory()) {
             if (whp.getBp().getName().startsWith(name)) {
                 parts.add(whp);

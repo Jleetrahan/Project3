@@ -13,7 +13,7 @@ public class WarehouseFactory {
         if (OfficeMan.class.isInstance(la)) {
             return new MainWarehouse();
         } else if (SalesAssociate.class.isInstance(la)) {
-            return new SalesVanWarehouse(la.username + la.password);
+            return new SalesVanWarehouse(la.getUsername() + la.getPassword());
         } else if (WarehouseManager.class.isInstance(la)) {
             return new MainWarehouse();
         }

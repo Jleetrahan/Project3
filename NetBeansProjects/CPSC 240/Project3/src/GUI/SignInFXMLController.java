@@ -37,7 +37,6 @@ public class SignInFXMLController implements Initializable {
     private void signIn(ActionEvent event) throws Exception {
         BikeDB db = BikeDB.getDB();
         for (LoginAccount user : db.getUsers()) {
-            System.out.println(username.getText() + user.username);
             if (user.validate(username.getText(), password.getText())) {
                 Parent root = null;
                 if (OfficeMan.class.isInstance(user)) {
@@ -45,7 +44,7 @@ public class SignInFXMLController implements Initializable {
                 } else if (SalesAssociate.class.isInstance(user)) {
                     root = FXMLLoader.load(getClass().getResource("SalesAssociate.fxml"));
                 } else if (SysAdmin.class.isInstance(user)) {
-                    root = FXMLLoader.load(getClass().getResource("SysAdmin.fxml"));
+                    root = FXMLLoader.load(getClass().getResource("SystemAdmin.fxml"));
                 } else if (WarehouseManager.class.isInstance(user)) {
                     root = FXMLLoader.load(getClass().getResource("WarehouseManager.fxml"));
                 }

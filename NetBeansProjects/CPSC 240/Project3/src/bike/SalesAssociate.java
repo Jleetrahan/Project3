@@ -20,7 +20,7 @@ import java.util.List;
 public class SalesAssociate extends LoginAccount {
     public String firstName;
     String lastName;
-    String email;
+    String email = null;
     Warehouse warehouse;
     
     public SalesAssociate(String fn, String ln, String em, String un, String pw){
