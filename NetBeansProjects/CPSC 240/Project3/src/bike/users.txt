@@ -1,6 +1,0 @@
-SysAdmin, Elizabeth, Parsons, admin@gmail.com, admin, minda
-OfficeMan, Bob, Builder, bob@gmail.com, bbuilder, digdug
-WarehouseManager, Darryl, Philbin, dphil@dundermifflin.com, darrylphil, fluffyfingers
-SalesAssociate, Robert, Parsons, rbrt_parsons@yahoo.com, rbrtparsons, Football2011
-SalesAssociate, CongCong, Qian, zqian@mail.umw.edu, CongCong0424, password
-SalesAssociate, Jackson, Trahan, jtrahan@mail.umw.edu, JTrahan, trahan1234
