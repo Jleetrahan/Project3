@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<TabPane fx:id="tabPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.OfficeManagerFXMLController">
+    <tabs>
+        <Tab text="Examine Part" closable="False">
+            <AnchorPane fx:id="loadPartPane" prefHeight="250" prefWidth="650">
+                <MenuButton layoutX="50" layoutY="50" text="Select an option:" fx:id="mb">
+                    <items>
+                        <MenuItem text="Enter part name" onAction="#switchPartName" fx:id="loadPartNameItem"/>
+                        <MenuItem text="Enter part number" onAction="#switchPartNumber" fx:id="loadPartNumberItem"/>
+                        <MenuItem text="Enter part quantity" onAction="#switchPartQuant" fx:id="loadPartQuantItem"/>
+                    </items>
+                </MenuButton>
+                <ListView layoutX="300" layoutY="50" prefWidth="300" prefHeight="150" fx:id="listView"/>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Order Part" closable="False">
+            <AnchorPane fx:id="OrderPartPane" prefHeight="250" prefWidth="650">
+                
+            </AnchorPane>
+        </Tab>
+        <Tab text="Log Out" fx:id="logOutButton" closable="False"/>
+    </tabs>
+</TabPane>

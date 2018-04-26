@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="250" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignInFXMLController" fx:id="ap">
+    <children>
+        <GridPane layoutX="25" layoutY="50" hgap="10" vgap="10" prefWidth="200">
+            <Text GridPane.columnIndex="0" GridPane.rowIndex="0" text="Username" fx:id="usernameText" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="100" fx:id="username" />
+            <Text GridPane.columnIndex="0" GridPane.rowIndex="1" text="Password" fx:id="passwordText" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="100" fx:id="password" />
+            <Button GridPane.columnIndex="0" GridPane.rowIndex="2" text="Sign in" onAction="#signIn" fx:id="signInButton" />
+            <Button GridPane.columnIndex="1" GridPane.rowIndex="2" text="Quit" onAction="#quit" fx:id="quitButton" />
+        </GridPane>
+    </children>
+</AnchorPane>
